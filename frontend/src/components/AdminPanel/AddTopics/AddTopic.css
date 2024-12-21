@@ -1,0 +1,135 @@
+/* AddTopic.css */
+
+.add-topic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  /* margin: 2rem auto; */
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 100%;
+  height: calc(100vh - 4rem); /* Full height minus the margin */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.add-topic-container::-webkit-scrollbar {
+  display: none;
+}
+
+.add-topic-title {
+  color: #00796b;
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  animation: fadeInDown 0.8s ease-in-out;
+}
+
+.add-topic-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.btn-primary {
+  background: linear-gradient(135deg, #00796b, #004d40);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #004d40, #00251a);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-topic-container {
+    padding: 1.5rem;
+    height: calc(100vh - 3rem); /* Adjust for smaller screens */
+  }
+
+  .add-topic-title {
+    font-size: 2rem;
+  }
+
+  .form-control {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-topic-container {
+    padding: 1rem;
+    height: calc(100vh - 2rem); /* Adjust for smallest screens */
+  }
+
+  .add-topic-title {
+    font-size: 1.8rem;
+  }
+
+  .form-control {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+}
+/* Allow full-page scrolling */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+}
